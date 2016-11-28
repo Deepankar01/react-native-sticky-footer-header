@@ -44,8 +44,8 @@ export default class fixedFooter extends Component {
 
                 <View style={styles.navigationHeader}>
                     <View style={styles.navigationIcons}>
-                        <Icon name="chevron-left" size={30} color="#FFF"  />
-                        <Icon name="chevron-right" size={30} color="#FFF" />
+                        <Icon name="angle-left" size={30} color="#FFF"  />
+                        <Icon name="angle-right" size={30} color="#FFF" />
                     </View>
 
                 </View>
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#03A9F4',
         flex:1/16,
         flexDirection:'row',
-        paddingTop:30,
+        paddingTop:26,
     },
     navigationIcons:{
         flexDirection:'row',
