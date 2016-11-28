@@ -45,12 +45,13 @@ export default class fixedFooter extends Component {
                 <View style={styles.navigationHeader}>
                     <View style={styles.navigationIcons}>
                         <Icon name="angle-left" size={30} color="#FFF"  />
+                        <Text style={{fontSize:18 ,paddingTop:4, color:'#FFF', fontWeight:'bold'}}>Awsome Header</Text>
                         <Icon name="angle-right" size={30} color="#FFF" />
                     </View>
 
                 </View>
 
-                <View style={{flex: 1, borderWidth: 1, paddingTop:8}}>
+                <View style={{flex: 1, borderWidth: 0, paddingTop:8}}>
                     <Text style={{alignSelf:'center'}}>I take up loads of space!</Text>
                     <ScrollView
                         scrollEventThrottle={16}
