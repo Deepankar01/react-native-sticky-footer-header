@@ -5,7 +5,7 @@
  */
 
 import React, {Component} from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
     AppRegistry,
     StyleSheet,
@@ -44,9 +44,9 @@ export default class fixedFooter extends Component {
 
                 <View style={styles.navigationHeader}>
                     <View style={styles.navigationIcons}>
-                        <Icon name="angle-left" size={30} color="#FFF"  />
-                        <Text style={{fontSize:18 ,paddingTop:4, color:'#FFF', fontWeight:'bold'}}>Awsome Header</Text>
-                        <Icon name="angle-right" size={30} color="#FFF" />
+                        <Icon name="arrow-back" size={30} color="#FFF"  />
+                        <Text style={styles.headerText}>Awsome Header</Text>
+                        <Icon name="arrow-forward" size={30} color="#FFF" />
                     </View>
 
                 </View>
@@ -96,7 +96,13 @@ const styles = StyleSheet.create({
     iconsFooter:{
         height:40,
         alignSelf: 'flex-end',
-    }
+    },
+    headerText:{
+        fontSize:18 ,
+        paddingTop:4,
+        color:'#FFF',
+        fontWeight:'bold',
+    },
 });
 
 AppRegistry.registerComponent('fixedFooter', () => fixedFooter);
