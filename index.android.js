@@ -44,9 +44,9 @@ export default class fixedFooter extends Component {
 
                 <View style={styles.navigationHeader}>
                     <View style={styles.navigationIcons}>
-                        <Icon name="arrow-back" size={30} color="#FFF"  />
+                        <Icon name="arrow-back" size={30} color="#FFF"/>
                         <Text style={styles.headerText}>Awsome Header</Text>
-                        <Icon name="arrow-forward" size={30} color="#FFF" />
+                        <Icon name="arrow-forward" size={30} color="#FFF"/>
                     </View>
 
                 </View>
@@ -62,11 +62,27 @@ export default class fixedFooter extends Component {
                 </View>
                 <View style={styles.Footer}>
                     <View style={styles.footerIcons}>
-                        <Icon name="home" size={30} color="#FFF"  />
-                        <Icon name="date-range" size={30} color="#FFF"  />
-                        <Icon name="school" size={30} color="#FFF"  />
-                        <Icon name="map" size={30} color="#FFF"  />
-                        <Icon name="person" size={30} color="#FFF"  />
+                        <View style={styles.footerIcon}>
+                            <Icon name="home" size={30} color="#FFF"/>
+                            <Text style={styles.footerIconLegend}>Home</Text>
+                        </View>
+
+                        <View style={styles.footerIcon}>
+                            <Icon name="date-range" size={30} color="#FFF"/>
+                            <Text style={styles.footerIconLegend}>Calender</Text>
+                        </View>
+                        <View style={styles.footerIcon}>
+                            <Icon name="school" size={30} color="#FFF"/>
+                            <Text style={styles.footerIconLegend}>Trainings</Text>
+                        </View>
+                        <View style={styles.footerIcon}>
+                            <Icon name="map" size={30} color="#FFF"/>
+                            <Text style={styles.footerIconLegend}>Nearby</Text>
+                        </View>
+                        <View style={styles.footerIcon}>
+                            <Icon name="person" size={30} color="#FFF"/>
+                            <Text style={styles.footerIconLegend}>Profile</Text>
+                        </View>
                     </View>
                 </View>
 
@@ -85,43 +101,47 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
 
     },
-    navigationHeader:{
-        alignSelf:'flex-start',
-        backgroundColor:'#03A9F4',
-        flex:1/16,
-        flexDirection:'row',
-        paddingTop:26,
+    navigationHeader: {
+        alignSelf: 'flex-start',
+        backgroundColor: '#03A9F4',
+        flex: 1 / 16,
+        flexDirection: 'row',
+        paddingTop: 26,
     },
-    footerIconText:{
-        flexDirection:'row',
-        flex:1,
-        justifyContent:'space-around',
+    footerIcons: {
+        flexDirection: 'row',
+        flex: 1,
+        justifyContent: 'space-around',
+        paddingTop: 4,
     },
-    footerIcons:{
-        flexDirection:'row',
-        flex:1,
-        justifyContent:'space-around',
-        paddingTop:4,
+    navigationIcons: {
+        flexDirection: 'row',
+        flex: 1,
+        justifyContent: 'space-around',
+        paddingLeft: 12,
+        paddingRight: 12,
     },
-    navigationIcons:{
-        flexDirection:'row',
-        flex:1,
-        justifyContent:'space-around',
-        paddingLeft:12,
-        paddingRight:12,
-    },
-    Footer:{
-        flex:1/12,
+    Footer: {
+        flex: 1 / 10,
         alignSelf: 'flex-end',
-        backgroundColor:'#03A9F4',
-        flexDirection:'row',
+        backgroundColor: '#03A9F4',
+        flexDirection: 'row',
 
     },
-    headerText:{
-        fontSize:18 ,
-        paddingTop:4,
+    FooterIcon:{
+        flexDirection:'column',
+        alignItems:'center'
+    },
+    footerIconLegend:{
+        fontSize:10,
         color:'#FFF',
-        fontWeight:'bold',
+        paddingTop:3,
+    },
+    headerText: {
+        fontSize: 18,
+        paddingTop: 4,
+        color: '#FFF',
+        fontWeight: 'bold',
     },
 });
 
