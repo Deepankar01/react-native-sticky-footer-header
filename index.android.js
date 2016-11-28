@@ -51,12 +51,9 @@ export default class fixedFooter extends Component {
 
                 </View>
 
-                <View style={{flex: 1, borderWidth: 0, paddingTop:8}}>
-                    <Text style={{alignSelf:'center'}}>I take up loads of space!</Text>
-                    <ScrollView
-                        scrollEventThrottle={16}
-
-                    >
+                <View style={{flex: 1, borderWidth: 0, paddingTop:8, paddingBottom:8,}}>
+                    {/*<Text style={{alignSelf:'center'}}>I take up loads of space!</Text>*/}
+                    <ScrollView scrollEventThrottle={16}>
                         {this._renderScrollViewContent()}
                     </ScrollView>
                 </View>
