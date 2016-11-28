@@ -5,6 +5,7 @@
  */
 
 import React, {Component} from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {
     AppRegistry,
     StyleSheet,
@@ -36,12 +37,18 @@ export default class fixedFooter extends Component {
         return (
             <View style={{flex: 1, alignItems: 'stretch'}}>
                 <StatusBar
-                    translucent={false}
+                    translucent={true}
                     barStyle="light-content"
-                    backgroundColor="rgba(0, 0, 0, 0.251)"
+                    backgroundColor="rgba(0, 0, 0, 0.254)"
                 />
 
-                <Text style={{alignSelf:'flex-start'}}>Sticky Header</Text>
+                <View style={styles.navigationHeader}>
+                    <View style={styles.navigationIcons}>
+                        <Icon name="chevron-left" size={30} color="#FFF"  />
+                        <Icon name="chevron-right" size={30} color="#FFF" />
+                    </View>
+
+                </View>
 
                 <View style={{flex: 1, borderWidth: 1, paddingTop:8}}>
                     <Text style={{alignSelf:'center'}}>I take up loads of space!</Text>
@@ -52,9 +59,9 @@ export default class fixedFooter extends Component {
                         {this._renderScrollViewContent()}
                     </ScrollView>
                 </View>
-                <Text style={{alignSelf: 'flex-end'}}>
-                    Sticky Footer
-                </Text>
+                <View style={styles.iconsFooter}>
+                    <Text>Sticky Footer</Text>
+                </View>
 
             </View>
         );
@@ -69,7 +76,26 @@ const styles = StyleSheet.create({
         backgroundColor: '#D3D3D3',
         alignItems: 'center',
         justifyContent: 'center',
+
     },
+    navigationHeader:{
+        alignSelf:'flex-start',
+        backgroundColor:'#03A9F4',
+        flex:1/16,
+        flexDirection:'row',
+        paddingTop:30,
+    },
+    navigationIcons:{
+        flexDirection:'row',
+        flex:1,
+        justifyContent:'space-between',
+        paddingLeft:12,
+        paddingRight:12,
+    },
+    iconsFooter:{
+        height:40,
+        alignSelf: 'flex-end',
+    }
 });
 
 AppRegistry.registerComponent('fixedFooter', () => fixedFooter);
