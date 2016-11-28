@@ -60,8 +60,14 @@ export default class fixedFooter extends Component {
                         {this._renderScrollViewContent()}
                     </ScrollView>
                 </View>
-                <View style={styles.iconsFooter}>
-                    <Text>Sticky Footer</Text>
+                <View style={styles.Footer}>
+                    <View style={styles.footerIcons}>
+                        <Icon name="home" size={30} color="#FFF"  />
+                        <Icon name="date-range" size={30} color="#FFF"  />
+                        <Icon name="school" size={30} color="#FFF"  />
+                        <Icon name="map" size={30} color="#FFF"  />
+                        <Icon name="person" size={30} color="#FFF"  />
+                    </View>
                 </View>
 
             </View>
@@ -86,16 +92,30 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         paddingTop:26,
     },
+    footerIconText:{
+        flexDirection:'row',
+        flex:1,
+        justifyContent:'space-around',
+    },
+    footerIcons:{
+        flexDirection:'row',
+        flex:1,
+        justifyContent:'space-around',
+        paddingTop:4,
+    },
     navigationIcons:{
         flexDirection:'row',
         flex:1,
-        justifyContent:'space-between',
+        justifyContent:'space-around',
         paddingLeft:12,
         paddingRight:12,
     },
-    iconsFooter:{
-        height:40,
+    Footer:{
+        flex:1/12,
         alignSelf: 'flex-end',
+        backgroundColor:'#03A9F4',
+        flexDirection:'row',
+
     },
     headerText:{
         fontSize:18 ,
